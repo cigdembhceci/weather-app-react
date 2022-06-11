@@ -11,6 +11,15 @@ function App() {
         <h1> Weather Search Engine </h1>
         <Weather />
       </div>
+      <small>
+        <a
+          href="https://github.com/cigdembhceci/weather-app-react"
+          target="_blank"
+        >
+          Open-source code
+        </a>
+        <span> by Cigdem B.</span>
+      </small>
     </div>
   );
 }
