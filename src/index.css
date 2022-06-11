@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header {
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 350;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
+  margin: 20px 0;
+  max-width: 500px;
+  padding: 20px 16px 24px;
+}
+.weatherSummary {
+  padding: 20px 0;
+}
+.weatherDetail {
+  color: #878787;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 20px;
+}
+.summaryHeader {
+  color: #878787;
+  font-size: 24px;
+  font-weight: 100;
+  margin: 0;
+  line-height: 28px;
 }

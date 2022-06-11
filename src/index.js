@@ -1,10 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Weather from "./Weather";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function App() {
+  return (
+    <div className="header">
+      <div className="container">
+        <h1> Weather Search Engine </h1>
+        <Weather />
+        <div className="weatherSummary">
+          <div className="summaryHeader"> Lisbon </div>
+          <div className="weatherDetail"> Thursday 13.46 </div>
+          <div className="weatherDetail"> Clouds </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
