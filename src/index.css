@@ -1,25 +1,30 @@
 .header {
-  width: 80%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  border-radius: 10px;
+  box-shadow: rgba(23, 23, 24, 0.08) 0 8px 8px 0;
+  background-image: linear-gradient(
+    rgb(251, 251, 204) 0%,
+    #ffff 30%,
+    rgb(161, 224, 241) 100%
+  );
+  width: 40%;
+  padding: 30px;
+  margin: 0 auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1rem;
   font-weight: 350;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
 }
 
 .container {
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
-  margin: 20px 0;
   max-width: 500px;
-  padding: 20px 16px 24px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
 }
-.weatherSummary {
-  padding: 20px 0;
-}
+
 .weatherDetail {
   color: #878787;
   font-size: 16px;
@@ -30,6 +35,5 @@
   color: #878787;
   font-size: 24px;
   font-weight: 100;
-  margin: 0;
   line-height: 28px;
 }

@@ -10,11 +10,6 @@ function App() {
       <div className="container">
         <h1> Weather Search Engine </h1>
         <Weather />
-        <div className="weatherSummary">
-          <div className="summaryHeader"> Lisbon </div>
-          <div className="weatherDetail"> Thursday 13.46 </div>
-          <div className="weatherDetail"> Clouds </div>
-        </div>
       </div>
     </div>
   );

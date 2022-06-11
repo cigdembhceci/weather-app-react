@@ -1,6 +1,8 @@
 import "./Weather.css";
 import axios from "axios";
 import React, { useState } from "react";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { SpinnerDiamond } from "spinners-react";
 
 export default function Weather() {
   const [city, setCity] = useState(" ");
@@ -10,18 +12,19 @@ export default function Weather() {
   function showTemp(response) {
     setSearch(true);
     setMessage(
-      <ul>
-        <li>
-          It is {Math.round(response.data.main.temp)}°C in {city}
-        </li>
-        <li> Description:{response.data.weather[0].description} </li>
-        <li> Humidity:{Math.round(response.data.main.humidity)} </li>
-        <li> Wind:{Math.round(response.data.wind.speed)} </li>
+      <div className="weatherDesc">
+        <div className="city"> {city} </div>
+        <div className="temp">{Math.round(response.data.main.temp)}°C</div>
+        <div className="desc">
+          <div>Description:{response.data.weather[0].description}</div>
+          <div>Humidity:{Math.round(response.data.main.humidity)} %</div>
+          <div>Wind:{Math.round(response.data.wind.speed)} km/h</div>
+        </div>
         <img
           src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
           alt={response.data.weather.description}
         />
-      </ul>
+      </div>
     );
   }
   function handleSubmit(event) {
@@ -31,7 +34,7 @@ export default function Weather() {
   }
 
   function updateCity(event) {
-    setCity(event.target.value);
+    setCity(event.target.value.toUpperCase());
   }
   let form = (
     <form onSubmit={handleSubmit}>
@@ -43,7 +46,7 @@ export default function Weather() {
       />
       <button className="btn btn-primary" type="Submit">
         Search
-      </button>
+      </button>{" "}
     </form>
   );
 
@@ -54,6 +57,13 @@ export default function Weather() {
       </div>
     );
   } else {
-    return form;
+    return (
+      <div>
+        <div className="form">{form} </div>
+        <div>
+          <SpinnerDiamond />
+        </div>
+      </div>
+    );
   }
 }
